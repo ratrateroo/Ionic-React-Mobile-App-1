@@ -1,0 +1,7 @@
+{
+  "name": "ionic react mobile app 1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
