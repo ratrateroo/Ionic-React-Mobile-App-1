@@ -6,6 +6,7 @@ import {
 	IonToolbar,
 	IonTitle,
 	IonContent,
+	IonButtons,
 	IonButton,
 	IonRippleEffect,
 	IonRow,
@@ -18,8 +19,21 @@ import {
 	IonMenu,
 	IonList,
 	IonMenuButton,
+	IonRouterOutlet,
+	IonIcon,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+
+import {
+	calculatorOutline,
+	refreshOutline,
+	mail,
+	paperPlane,
+	heart,
+	archive,
+	trash,
+	warning,
+} from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -42,9 +56,48 @@ import './theme/variables.css';
 
 const App: React.FC = () => (
 	<IonApp>
-		<IonMenu side="start" menuId="first">
+		<IonMenu side="start" content-id="main-part">
 			<IonHeader>
-				<IonToolbar color="success">
+				<IonToolbar>
+					<IonTitle>Start Menu</IonTitle>
+				</IonToolbar>
+			</IonHeader>
+			<IonContent>
+				<IonList>
+					<IonItem>
+						<IonIcon icon={mail} slot="start"></IonIcon>
+						<IonLabel>Inbox</IonLabel>
+					</IonItem>
+					<IonItem>
+						<IonIcon icon={paperPlane} slot="start"></IonIcon>
+						<IonLabel>Outbox</IonLabel>
+					</IonItem>
+					<IonItem>
+						<IonIcon icon={heart} slot="start"></IonIcon>
+						<IonLabel>Favorites</IonLabel>
+					</IonItem>
+					<IonItem>
+						<IonIcon icon={archive} slot="start"></IonIcon>
+						<IonLabel>Archived</IonLabel>
+					</IonItem>
+					<IonItem>
+						<IonIcon icon={trash} slot="start"></IonIcon>
+						<IonLabel>Trash</IonLabel>
+					</IonItem>
+					<IonItem>
+						<IonIcon icon={warning} slot="start"></IonIcon>
+						<IonLabel>Spam</IonLabel>
+					</IonItem>
+				</IonList>
+			</IonContent>
+		</IonMenu>
+
+		<div className="ion-page" id="main-part">
+			<IonHeader>
+				<IonToolbar color="primary">
+					<IonButtons slot="start">
+						<IonMenuButton></IonMenuButton>
+					</IonButtons>
 					<IonTitle>Mobile App 1</IonTitle>
 				</IonToolbar>
 			</IonHeader>
@@ -77,7 +130,7 @@ const App: React.FC = () => (
 					</IonRow>
 				</IonGrid>
 			</IonContent>
-		</IonMenu>
+		</div>
 	</IonApp>
 );
 
