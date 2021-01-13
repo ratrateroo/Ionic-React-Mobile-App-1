@@ -53,13 +53,18 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Home from './pages/Home';
+import Orders from './pages/Orders';
+import Account from './pages/Account';
+import LogIn from './pages/LogIn';
+import SignUp from './pages/SignUp';
 
 const App: React.FC = () => (
 	<IonApp>
 		<IonMenu side="start" content-id="main-part">
 			<IonHeader>
 				<IonToolbar>
-					<IonTitle size="large">Welcome Username</IonTitle>
+					<IonTitle>Welcome Username</IonTitle>
 				</IonToolbar>
 			</IonHeader>
 			<IonContent>
@@ -77,12 +82,12 @@ const App: React.FC = () => (
 						<IonLabel>Account</IonLabel>
 					</IonItem>
 
-					<IonItem routerLink="/login">
+					<IonItem routerLink="/categories">
 						<IonIcon icon={locate} slot="start"></IonIcon>
 						<IonLabel>Categories</IonLabel>
 					</IonItem>
 
-					<IonItem routerLink="/categories">
+					<IonItem routerLink="/login">
 						<IonIcon icon={enter} slot="start"></IonIcon>
 						<IonLabel>Log In</IonLabel>
 					</IonItem>
@@ -107,37 +112,16 @@ const App: React.FC = () => (
 			</IonHeader>
 			<IonContent className="ion-padding">
 				<IonGrid>
-					<IonRouterOutlet>
-						<Route exact path="/home" component={Home} />
-						<Route exact path="/orders" component={Orders} />
-						<Route exact path="/account" component={Account} />
-						<Route exact path="/login" component={LogIn} />
-						<Route exact path="/signup" component={SignUp} />
-					</IonRouterOutlet>
 					<IonRow>
-						<IonCol className="ion-text-center">
-							<IonText color="dark">
-								<h1>User Log In</h1>
-							</IonText>
-						</IonCol>
-					</IonRow>
-					<IonRow>
-						<IonCol>
-							<IonItem>
-								<IonLabel position="floating">Username:</IonLabel>
-								<IonInput type="text"></IonInput>
-							</IonItem>
-
-							<IonItem>
-								<IonLabel position="floating">Password:</IonLabel>
-								<IonInput type="password"></IonInput>
-							</IonItem>
-						</IonCol>
-					</IonRow>
-					<IonRow>
-						<IonCol className="ion-text-center">
-							<IonButton color="success">Log In</IonButton>
-						</IonCol>
+						<IonReactRouter>
+							<IonRouterOutlet>
+								<Route exact path="/home" component={Home} />
+								<Route exact path="/orders" component={Orders} />
+								<Route exact path="/account" component={Account} />
+								<Route exact path="/login" component={LogIn} />
+								<Route exact path="/signup" component={SignUp} />
+							</IonRouterOutlet>
+						</IonReactRouter>
 					</IonRow>
 				</IonGrid>
 			</IonContent>
