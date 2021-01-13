@@ -25,14 +25,14 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 
 import {
-	calculatorOutline,
-	refreshOutline,
-	mail,
-	paperPlane,
-	heart,
-	archive,
-	trash,
-	warning,
+	home,
+	cart,
+	accessibility,
+	locate,
+	enter,
+	create,
+	personCircleOutline,
+	personOutline,
 } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
@@ -59,34 +59,37 @@ const App: React.FC = () => (
 		<IonMenu side="start" content-id="main-part">
 			<IonHeader>
 				<IonToolbar>
-					<IonTitle>Start Menu</IonTitle>
+					<IonTitle size="large">Welcome Username</IonTitle>
 				</IonToolbar>
 			</IonHeader>
 			<IonContent>
 				<IonList>
-					<IonItem>
-						<IonIcon icon={mail} slot="start"></IonIcon>
-						<IonLabel>Inbox</IonLabel>
+					<IonItem routerLink="/home">
+						<IonIcon icon={home} slot="start"></IonIcon>
+						<IonLabel>Home</IonLabel>
 					</IonItem>
-					<IonItem>
-						<IonIcon icon={paperPlane} slot="start"></IonIcon>
-						<IonLabel>Outbox</IonLabel>
+					<IonItem routerLink="/orders">
+						<IonIcon icon={cart} slot="start"></IonIcon>
+						<IonLabel>Orders</IonLabel>
 					</IonItem>
-					<IonItem>
-						<IonIcon icon={heart} slot="start"></IonIcon>
-						<IonLabel>Favorites</IonLabel>
+					<IonItem routerLink="/account">
+						<IonIcon icon={accessibility} slot="start"></IonIcon>
+						<IonLabel>Account</IonLabel>
 					</IonItem>
-					<IonItem>
-						<IonIcon icon={archive} slot="start"></IonIcon>
-						<IonLabel>Archived</IonLabel>
+
+					<IonItem routerLink="/login">
+						<IonIcon icon={locate} slot="start"></IonIcon>
+						<IonLabel>Categories</IonLabel>
 					</IonItem>
-					<IonItem>
-						<IonIcon icon={trash} slot="start"></IonIcon>
-						<IonLabel>Trash</IonLabel>
+
+					<IonItem routerLink="/categories">
+						<IonIcon icon={enter} slot="start"></IonIcon>
+						<IonLabel>Log In</IonLabel>
 					</IonItem>
-					<IonItem>
-						<IonIcon icon={warning} slot="start"></IonIcon>
-						<IonLabel>Spam</IonLabel>
+
+					<IonItem routerLink="/signup">
+						<IonIcon icon={create} slot="start"></IonIcon>
+						<IonLabel>Sign Up</IonLabel>
 					</IonItem>
 				</IonList>
 			</IonContent>
@@ -98,11 +101,19 @@ const App: React.FC = () => (
 					<IonButtons slot="start">
 						<IonMenuButton></IonMenuButton>
 					</IonButtons>
+
 					<IonTitle>Mobile App 1</IonTitle>
 				</IonToolbar>
 			</IonHeader>
 			<IonContent className="ion-padding">
 				<IonGrid>
+					<IonRouterOutlet>
+						<Route exact path="/home" component={Home} />
+						<Route exact path="/orders" component={Orders} />
+						<Route exact path="/account" component={Account} />
+						<Route exact path="/login" component={LogIn} />
+						<Route exact path="/signup" component={SignUp} />
+					</IonRouterOutlet>
 					<IonRow>
 						<IonCol className="ion-text-center">
 							<IonText color="dark">
