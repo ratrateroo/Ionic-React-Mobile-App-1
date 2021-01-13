@@ -1,22 +1,40 @@
+import React from 'react';
+import { Redirect, Route } from 'react-router-dom';
 import {
-	IonButton,
-	IonCol,
-	IonContent,
-	IonGrid,
+	IonApp,
 	IonHeader,
-	IonInput,
-	IonItem,
-	IonLabel,
-	IonPage,
-	IonRouterOutlet,
+	IonToolbar,
+	IonTitle,
+	IonContent,
+	IonButtons,
+	IonButton,
+	IonRippleEffect,
 	IonRow,
 	IonText,
-	IonTitle,
-	IonToolbar,
+	IonGrid,
+	IonCol,
+	IonItem,
+	IonLabel,
+	IonInput,
+	IonMenu,
+	IonList,
+	IonMenuButton,
+	IonRouterOutlet,
+	IonIcon,
+	IonPage,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import React from 'react';
-import { Route } from 'react-router';
+
+import {
+	home,
+	cart,
+	accessibility,
+	locate,
+	enter,
+	create,
+	personCircleOutline,
+	personOutline,
+} from 'ionicons/icons';
 
 const LogIn: React.FC = () => {
 	return (
