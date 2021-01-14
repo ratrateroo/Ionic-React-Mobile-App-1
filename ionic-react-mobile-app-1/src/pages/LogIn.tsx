@@ -1,5 +1,7 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
+
+import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth';
 import {
 	IonApp,
 	IonHeader,
@@ -22,6 +24,8 @@ import {
 	IonRouterOutlet,
 	IonIcon,
 	IonPage,
+	IonAlert,
+	isPlatform,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -37,6 +41,50 @@ import {
 } from 'ionicons/icons';
 
 const LogIn: React.FC = () => {
+	const fingerprintScanner = () => {
+		const androidFingerprintAuth = AndroidFingerprintAuth;
+
+		if (isPlatform('cordova')) {
+			// You're on a device, call the native plugins. Example:
+			//
+			// var url: string = '';
+			//
+			// Camera.getPicture().then((fileUri) => url = fileUri);
+
+			androidFingerprintAuth.isAvailable().then((result) => {
+				alert('Result ' + JSON.stringify(result));
+				if (result.isHardwareDetected) {
+					alert('Fingerprint Hardware Detected');
+				}
+
+				if (result.isAvailable) {
+					androidFingerprintAuth
+						.encrypt({
+							clientId: 'clientId',
+							username: 'username',
+							password: 'password',
+						})
+						.then((result) => {
+							alert('Result ' + JSON.stringify(result));
+							if (result.withFingerprint) {
+								alert('Successfully encrypted credentials.');
+								alert('Encrypted credentials: ' + result.token);
+							} else if (result.withBackup) {
+								alert('Authenticated with backup password');
+							} else {
+								alert('Not Authenticated');
+							}
+						});
+				}
+			});
+		} else {
+			// You're testing in browser, do nothing or mock the plugins' behaviour.
+			//
+			// var url: string = 'assets/mock-images/image.jpg';
+			alert('No Cordova');
+		}
+	};
+
 	return (
 		<IonPage>
 			<IonHeader>
@@ -45,8 +93,13 @@ const LogIn: React.FC = () => {
 				</IonToolbar>
 			</IonHeader>
 
-			<IonContent className="ion-padding" fullscreen={true}>
+			<IonContent className="ion-padding">
 				<IonGrid>
+					<IonRow>
+						<IonCol className="ion-text-center">
+							<IonButton onClick={fingerprintScanner}>Click</IonButton>
+						</IonCol>
+					</IonRow>
 					<IonRow>
 						<IonCol className="ion-text-center">
 							<IonText color="dark">
@@ -70,6 +123,7 @@ const LogIn: React.FC = () => {
 					<IonRow>
 						<IonCol className="ion-text-center">
 							<IonButton color="success">Log In</IonButton>
+							<IonButton onClick={fingerprintScanner}>Click</IonButton>
 						</IonCol>
 					</IonRow>
 				</IonGrid>
