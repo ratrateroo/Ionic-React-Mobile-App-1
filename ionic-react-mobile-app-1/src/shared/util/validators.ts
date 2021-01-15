@@ -28,7 +28,7 @@ export const VALIDATOR_MAX = (val: number) => ({
 });
 export const VALIDATOR_EMAIL = () => ({ type: VALIDATOR_TYPE_EMAIL });
 
-export const validate = (value: string, validators: any) => {
+export const validate = (value: string, validators: any[]) => {
 	let isValid = true;
 
 	for (const validator of validators) {
