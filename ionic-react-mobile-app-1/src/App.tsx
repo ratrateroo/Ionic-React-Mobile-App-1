@@ -53,12 +53,15 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+
 import Home from './pages/Home';
 import Orders from './pages/Orders';
 import Account from './pages/Account';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import Menu from './components/Menu';
+
+import MainPage from './pages/MainPage';
 
 const App: React.FC = () => (
 	<IonApp>
@@ -79,6 +82,7 @@ const App: React.FC = () => (
 					<IonGrid>
 						<IonRow>
 							<IonRouterOutlet>
+								<Route exact path="/" component={MainPage} />
 								<Route exact path="/home" component={Home} />
 								<Route exact path="/orders" component={Orders} />
 								<Route exact path="/account" component={Account} />
