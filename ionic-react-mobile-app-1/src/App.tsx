@@ -21,6 +21,7 @@ import {
 	IonMenuButton,
 	IonRouterOutlet,
 	IonIcon,
+	IonImg,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -53,6 +54,12 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+/* Custom Styling */
+import './styles/customstyles.css';
+
+import './App.css';
+
+import { ImageResizer, ImageResizerOptions } from '@ionic-native/image-resizer';
 
 import Home from './pages/Home';
 import Orders from './pages/Orders';
@@ -62,6 +69,20 @@ import SignUp from './pages/SignUp';
 import Menu from './components/Menu';
 
 import MainPage from './pages/MainPage';
+
+let options = {
+	uri: '/assets/Asset 1.png',
+	folderName: 'Protonet',
+	quality: 90,
+	width: 20,
+	height: 20,
+} as ImageResizerOptions;
+const imageResizer = ImageResizer;
+
+imageResizer
+	.resize(options)
+	.then((filePath: string) => console.log('assets/Asset 1.png', filePath))
+	.catch((e) => console.log(e));
 
 const App: React.FC = () => (
 	<IonApp>
@@ -74,8 +95,18 @@ const App: React.FC = () => (
 						<IonButtons slot="start">
 							<IonMenuButton></IonMenuButton>
 						</IonButtons>
-
-						<IonTitle>Mobile App 1</IonTitle>
+						<IonGrid>
+							<IonRow>
+								<IonCol>
+									<IonTitle size="small">
+										Shopping While Black
+									</IonTitle>
+								</IonCol>
+								<IonCol>
+									<IonImg src="assets/Asset 1.png" id="mainlogo" />
+								</IonCol>
+							</IonRow>
+						</IonGrid>
 					</IonToolbar>
 				</IonHeader>
 				<IonContent className="ion-padding">
