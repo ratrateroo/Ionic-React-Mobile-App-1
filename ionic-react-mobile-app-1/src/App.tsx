@@ -59,8 +59,6 @@ import './styles/customstyles.css';
 
 import './App.css';
 
-import { ImageResizer, ImageResizerOptions } from '@ionic-native/image-resizer';
-
 import Home from './pages/Home';
 import Orders from './pages/Orders';
 import Account from './pages/Account';
@@ -69,20 +67,6 @@ import SignUp from './pages/SignUp';
 import Menu from './components/Menu';
 
 import MainPage from './pages/MainPage';
-
-let options = {
-	uri: '/assets/Asset 1.png',
-	folderName: 'Protonet',
-	quality: 90,
-	width: 20,
-	height: 20,
-} as ImageResizerOptions;
-const imageResizer = ImageResizer;
-
-imageResizer
-	.resize(options)
-	.then((filePath: string) => console.log('assets/Asset 1.png', filePath))
-	.catch((e) => console.log(e));
 
 const App: React.FC = () => (
 	<IonApp>
@@ -103,7 +87,7 @@ const App: React.FC = () => (
 									</IonTitle>
 								</IonCol>
 								<IonCol>
-									<IonImg src="assets/Asset 1.png" id="mainlogo" />
+									<IonImg src="assets/Asset 1.png" />
 								</IonCol>
 							</IonRow>
 						</IonGrid>

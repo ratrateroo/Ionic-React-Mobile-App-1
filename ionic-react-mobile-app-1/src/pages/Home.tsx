@@ -74,7 +74,7 @@ const Home: React.FC = () => {
 	const [location, setLocation] = useState('brown');
 	return (
 		<IonPage>
-			<IonSearchbar color="tertiary" />
+			<IonSearchbar className="searchbar" />
 
 			{/* <IonContent fullscreen>
 				<IonHeader collapse="condense">
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
 					</IonToolbar>
 				</IonHeader>
 			</IonContent> */}
-			<IonContent>
+			<IonContent className="mainpage">
 				<IonGrid>
 					<IonRow>
 						<IonCol>
@@ -108,7 +108,10 @@ const Home: React.FC = () => {
 												{items.map((image, i) => (
 													<IonCol key={i}>
 														<IonAvatar>
-															<img src={image.src} />
+															<IonImg
+																className="categoryicons"
+																src={image.src}
+															/>
 														</IonAvatar>
 
 														<IonText>{image.text}</IonText>

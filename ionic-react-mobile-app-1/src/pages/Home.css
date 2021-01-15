@@ -1,0 +1,13 @@
+.categoryicons::part(image) {
+	height: 20px;
+	width: 20px;
+}
+
+.mainpage::part(background) {
+	--background-color: gray;
+}
+
+.searchbar-input {
+	--background: greenyellow;
+	color: red;
+}

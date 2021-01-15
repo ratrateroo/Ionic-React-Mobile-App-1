@@ -1,4 +1,4 @@
-#mainlogo {
-	width: 20px;
-	height: 20px;
+ion-img::part(image) {
+	height: 30px;
+	width: 30px;
 }
