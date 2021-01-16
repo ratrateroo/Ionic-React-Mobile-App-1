@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect, Route } from 'react-router-dom';
+import './Home.css';
 import {
 	IonApp,
 	IonHeader,
@@ -56,8 +57,8 @@ type Item = {
 };
 
 const items: Item[] = [
-	{ src: 'assets/idea.png', text: 'Great Deals' },
-	{ src: 'assets/house.png', text: 'Home & Kitchen' },
+	{ src: 'assets/idea.png', text: 'Good Deals' },
+	{ src: 'assets/house.png', text: 'Home' },
 	{ src: 'assets/book.png', text: 'Books' },
 	{ src: 'assets/smartphone.png', text: 'Electronics' },
 	{ src: 'assets/heart.png', text: 'Health' },
@@ -65,7 +66,7 @@ const items: Item[] = [
 
 const slideOpts = {
 	initialSlide: 0,
-	speed: 500,
+	speed: 1000,
 	autoplay: true,
 };
 
@@ -107,16 +108,43 @@ const Home: React.FC = () => {
 											<IonRow>
 												{items.map((image, i) => (
 													<IonCol key={i}>
-														<IonAvatar>
-															<IonImg
-																className="categoryicons"
-																src={image.src}
-															/>
-														</IonAvatar>
+														<IonImg
+															className="categoryicons"
+															src={image.src}
+														/>
 
-														<IonText>{image.text}</IonText>
+														<IonText>
+															<h6>{image.text}</h6>
+														</IonText>
 													</IonCol>
 												))}
+												{/* 
+												<IonImg
+													className="categoryicons"
+													src="assets/house.png"
+												/>
+
+												<IonImg
+													className="categoryicons"
+													src="assets/book.png"
+												/>
+
+												<IonImg
+													className="categoryicons"
+													src="assets/heart.png"
+												/>
+
+												<IonImg
+													className="categoryicons"
+													src="assets/idea.png"
+												/>
+
+												<IonImg
+													className="categoryicons"
+													src="assets/smartphone.png"
+												/>
+
+												<IonText>Home</IonText> */}
 											</IonRow>
 										</IonGrid>
 									</IonCol>
@@ -158,15 +186,42 @@ const Home: React.FC = () => {
 						</IonCol>
 					</IonRow>
 					<IonRow>
-						<IonSlides pager={true} options={slideOpts}>
+						<IonSlides options={slideOpts}>
 							<IonSlide>
-								<h1>Slide 1</h1>
+								<IonText>
+									<IonImg src="assets/img1.png" />
+								</IonText>
 							</IonSlide>
 							<IonSlide>
-								<h1>Slide 2</h1>
+								<IonText>
+									<IonImg src="assets/img2.png" />
+								</IonText>
 							</IonSlide>
 							<IonSlide>
-								<h1>Slide 3</h1>
+								<IonText>
+									<IonImg src="assets/img3.png" />
+								</IonText>
+							</IonSlide>
+							<IonSlide>
+								<IonText>
+									<IonImg src="assets/img4.png" />
+								</IonText>
+							</IonSlide>
+						</IonSlides>
+					</IonRow>
+					<IonRow>
+						<IonSlides options={slideOpts}>
+							<IonSlide>
+								<IonTitle>Product 1</IonTitle>
+							</IonSlide>
+							<IonSlide>
+								<IonTitle>Product 2</IonTitle>
+							</IonSlide>
+							<IonSlide>
+								<IonTitle>Product 3</IonTitle>
+							</IonSlide>
+							<IonSlide>
+								<IonTitle>Product 4</IonTitle>
 							</IonSlide>
 						</IonSlides>
 					</IonRow>

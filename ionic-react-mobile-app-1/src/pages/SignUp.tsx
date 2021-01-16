@@ -39,17 +39,41 @@ import {
 const SignUp: React.FC = () => {
 	return (
 		<IonPage>
-			<IonHeader>
-				<IonToolbar>
-					<IonTitle>Blank</IonTitle>
-				</IonToolbar>
-			</IonHeader>
-			<IonContent fullscreen>
-				<IonHeader collapse="condense">
-					<IonToolbar>
-						<IonTitle size="large">Sign Up Page</IonTitle>
-					</IonToolbar>
-				</IonHeader>
+			<IonContent className="ion-padding">
+				<IonGrid>
+					<IonRow>
+						<IonCol className="ion-text-center">
+							<IonText color="dark">
+								<h1>User Sign Up</h1>
+							</IonText>
+						</IonCol>
+					</IonRow>
+					<IonRow>
+						<IonCol>
+							<IonItem>
+								<IonLabel position="floating">Username:</IonLabel>
+								<IonInput type="text"></IonInput>
+							</IonItem>
+
+							<IonItem>
+								<IonLabel position="floating">Password:</IonLabel>
+								<IonInput type="password"></IonInput>
+							</IonItem>
+						</IonCol>
+					</IonRow>
+					<IonRow>
+						<IonCol className="ion-text-center">
+							<IonButton color="primary">Sign Up</IonButton>
+						</IonCol>
+					</IonRow>
+					<IonRow>
+						<IonCol className="ion-text-center">
+							<IonButton size="small" href="/login" color="secondary">
+								Already Registered?
+							</IonButton>
+						</IonCol>
+					</IonRow>
+				</IonGrid>
 			</IonContent>
 		</IonPage>
 	);

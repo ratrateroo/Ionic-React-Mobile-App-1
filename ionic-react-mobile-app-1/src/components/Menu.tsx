@@ -37,7 +37,7 @@ import {
 
 const Menu: React.FC = () => {
 	return (
-		<IonMenu side="start" content-id="main-part">
+		<IonMenu type="push" side="start" content-id="main-part">
 			<IonHeader>
 				<IonToolbar>
 					<IonTitle>Welcome Username</IonTitle>

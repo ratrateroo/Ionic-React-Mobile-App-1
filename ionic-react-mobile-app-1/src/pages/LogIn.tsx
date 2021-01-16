@@ -87,19 +87,8 @@ const LogIn: React.FC = () => {
 
 	return (
 		<IonPage>
-			<IonHeader>
-				<IonToolbar>
-					<IonTitle>Login Page</IonTitle>
-				</IonToolbar>
-			</IonHeader>
-
 			<IonContent className="ion-padding">
 				<IonGrid>
-					<IonRow>
-						<IonCol className="ion-text-center">
-							<IonButton onClick={fingerprintScanner}>Click</IonButton>
-						</IonCol>
-					</IonRow>
 					<IonRow>
 						<IonCol className="ion-text-center">
 							<IonText color="dark">
@@ -122,8 +111,17 @@ const LogIn: React.FC = () => {
 					</IonRow>
 					<IonRow>
 						<IonCol className="ion-text-center">
-							<IonButton color="success">Log In</IonButton>
-							<IonButton onClick={fingerprintScanner}>Click</IonButton>
+							<IonButton onClick={fingerprintScanner} color="primary">
+								Log In
+							</IonButton>
+						</IonCol>
+					</IonRow>
+
+					<IonRow>
+						<IonCol className="ion-text-center">
+							<IonButton size="small" href="/signup" color="secondary">
+								Not yet Registered?
+							</IonButton>
 						</IonCol>
 					</IonRow>
 				</IonGrid>

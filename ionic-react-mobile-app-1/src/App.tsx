@@ -22,6 +22,8 @@ import {
 	IonRouterOutlet,
 	IonIcon,
 	IonImg,
+	IonItemDivider,
+	IonAvatar,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -61,6 +63,7 @@ import './App.css';
 
 import Home from './pages/Home';
 import Orders from './pages/Orders';
+import Categories from './pages/Categories';
 import Account from './pages/Account';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
@@ -76,17 +79,21 @@ const App: React.FC = () => (
 			<div className="ion-page" id="main-part">
 				<IonHeader>
 					<IonToolbar color="primary">
-						<IonButtons slot="start">
-							<IonMenuButton></IonMenuButton>
-						</IonButtons>
 						<IonGrid>
 							<IonRow>
-								<IonCol>
-									<IonTitle size="small">
-										Shopping While Black
-									</IonTitle>
+								<IonCol size="2">
+									<IonButtons>
+										<IonMenuButton></IonMenuButton>
+									</IonButtons>
 								</IonCol>
-								<IonCol>
+								<IonCol size="7">
+									<div className="ion-text-center">
+										<IonTitle size="small">
+											<h4>Shopping While Black</h4>
+										</IonTitle>
+									</div>
+								</IonCol>
+								<IonCol size="3">
 									<IonImg src="assets/Asset 1.png" />
 								</IonCol>
 							</IonRow>
@@ -97,12 +104,18 @@ const App: React.FC = () => (
 					<IonGrid>
 						<IonRow>
 							<IonRouterOutlet>
-								<Route exact path="/" component={MainPage} />
+								<Route exact path="/" />
 								<Route exact path="/home" component={Home} />
 								<Route exact path="/orders" component={Orders} />
+								<Route
+									exact
+									path="/Categories"
+									component={Categories}
+								/>
 								<Route exact path="/account" component={Account} />
 								<Route exact path="/login" component={LogIn} />
 								<Route exact path="/signup" component={SignUp} />
+								<Redirect exact from="/" to="/home" />
 							</IonRouterOutlet>
 						</IonRow>
 					</IonGrid>
