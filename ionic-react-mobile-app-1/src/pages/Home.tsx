@@ -35,6 +35,10 @@ import {
 	IonImg,
 	IonThumbnail,
 	IonCard,
+	IonFooter,
+	IonTabs,
+	IonTabBar,
+	IonTabButton,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -51,6 +55,9 @@ import {
 	locationOutline,
 	caretDown,
 } from 'ionicons/icons';
+import Account from './Account';
+import Orders from './Orders';
+import Categories from './Categories';
 
 type Item = {
 	src: string;
@@ -75,7 +82,7 @@ const Home: React.FC = () => {
 	const [gender, setGender] = useState();
 	const [location, setLocation] = useState('brown');
 	return (
-		<IonPage>
+		<React.Fragment>
 			<IonSearchbar className="searchbar" />
 
 			{/* <IonContent fullscreen>
@@ -228,43 +235,49 @@ const Home: React.FC = () => {
 					</IonRow> */}
 					<IonRow>
 						<IonGrid>
-							<IonRow>
-								<IonCol size="8">
-									<div>
-										<h6>Work from home without worries.</h6>
-										<IonImg src="assets/ELECTRONICDESKTOP_N2_620x420.jpg" />
-									</div>
-								</IonCol>
-								<IonCol size="4">
-									<div>
-										<IonImg src="assets/HOMEDECORDESKTOP_N1_360x420.jpg" />
-										<h5>Up to 30% Off</h5>
-										<p>Style your home</p>
-									</div>
-								</IonCol>
-							</IonRow>
-							<IonRow>
-								<IonCol size="4">
-									<div>
-										<IonImg src="assets/KITCHENEDESKTOP_N1_360x420.jpg" />
-										<h5>Up to 50% Off</h5>
-										<p>Kitchen Must Haves</p>
-									</div>
-								</IonCol>
-								<IonCol size="8">
-									<div>
-										<h6>Get comfy with these bed and bath items.</h6>
-										<IonImg src="assets/BEDBATHDESKTOP_N2_620x420.jpg" />
-									</div>
-								</IonCol>
-							</IonRow>
+							<IonCard>
+								<IonRow>
+									<IonCol size="8">
+										<div>
+											<h6>Work from home without worries.</h6>
+											<IonImg src="assets/ELECTRONICDESKTOP_N2_620x420.jpg" />
+										</div>
+									</IonCol>
+									<IonCol size="4">
+										<div>
+											<IonImg src="assets/HOMEDECORDESKTOP_N1_360x420.jpg" />
+											<h5>Up to 30% Off</h5>
+											<p>Style your home</p>
+										</div>
+									</IonCol>
+								</IonRow>
+							</IonCard>
+							<IonCard>
+								<IonRow>
+									<IonCol size="4">
+										<div>
+											<IonImg src="assets/KITCHENEDESKTOP_N1_360x420.jpg" />
+											<h5>Up to 50% Off</h5>
+											<p>Kitchen Must Haves</p>
+										</div>
+									</IonCol>
+									<IonCol size="8">
+										<div>
+											<h6>
+												Get comfy with these bed and bath items.
+											</h6>
+											<IonImg src="assets/BEDBATHDESKTOP_N2_620x420.jpg" />
+										</div>
+									</IonCol>
+								</IonRow>
+							</IonCard>
 						</IonGrid>
 					</IonRow>
 					<IonRow>
 						<IonGrid>
 							<IonRow>
 								<IonCol size="12">
-									<h5 className="ionTextCenter">Just For You</h5>
+									<h5 className="ion-text-center">Just For You</h5>
 								</IonCol>
 							</IonRow>
 						</IonGrid>
@@ -312,7 +325,7 @@ const Home: React.FC = () => {
 						<IonGrid>
 							<IonRow>
 								<IonCol size="12">
-									<h5 className="ionTextCenter">Trending</h5>
+									<h5 className="ion-text-center">Trending</h5>
 								</IonCol>
 							</IonRow>
 						</IonGrid>
@@ -334,7 +347,7 @@ const Home: React.FC = () => {
 								</IonCol>
 							</IonRow>
 							<IonRow>
-								<IonCol size="5" offset="6">
+								<IonCol size="6" offset="6">
 									<div>
 										<IonImg src="assets/STEPFORWARDDESKTOP_322X300.jpg" />
 									</div>
@@ -347,7 +360,7 @@ const Home: React.FC = () => {
 						<IonGrid>
 							<IonRow>
 								<IonCol size="12">
-									<h5 className="ionTextCenter">
+									<h5 className="ion-text-center">
 										Latest Affiliated Brands
 									</h5>
 								</IonCol>
@@ -401,8 +414,97 @@ const Home: React.FC = () => {
 						</IonGrid>
 					</IonRow>
 				</IonGrid>
+
+				<IonGrid>
+					<IonRow>
+						<IonGrid>
+							<IonRow>
+								<IonCol size="12">
+									<IonToolbar className="ion-text-center">
+										<IonButton color="danger">
+											Discover More Brands
+										</IonButton>
+									</IonToolbar>
+								</IonCol>
+							</IonRow>
+						</IonGrid>
+					</IonRow>
+					<IonRow>
+						<IonCol size="4">
+							<p className="ion-text-center">Contact</p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center">About</p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center">Login</p>
+						</IonCol>
+					</IonRow>
+					<IonRow>
+						<IonCol size="4">
+							<p className="ion-text-center">FAQ</p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center">Terms and Conditions</p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center">Privacy Policy</p>
+						</IonCol>
+					</IonRow>
+					<IonRow>
+						<IonCol size="4">
+							<p className="ion-text-center"></p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center"></p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center"></p>
+						</IonCol>
+					</IonRow>
+					<IonRow>
+						<IonCol size="4">
+							<p className="ion-text-center"></p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center"></p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center"></p>
+						</IonCol>
+					</IonRow>
+				</IonGrid>
 			</IonContent>
-		</IonPage>
+			<IonContent>
+				<IonTabs>
+					<IonRouterOutlet>
+						<Route
+							path="/categories"
+							component={Categories}
+							exact={true}
+						/>
+						<Route path="/orders" component={Orders} exact={true} />
+						<Route path="/account" component={Account} exact={true} />
+						<Route
+							path="/"
+							render={() => <Redirect to="/home" />}
+							exact={true}
+						/>
+					</IonRouterOutlet>
+					<IonTabBar slot="bottom">
+						<IonTabButton tab="Categories">
+							<IonIcon icon={locate} />
+						</IonTabButton>
+						<IonTabButton tab="Orders">
+							<IonIcon icon={cart} />
+						</IonTabButton>
+						<IonTabButton tab="Account">
+							<IonIcon icon={accessibility} />
+						</IonTabButton>
+					</IonTabBar>
+				</IonTabs>
+			</IonContent>
+		</React.Fragment>
 	);
 };
 

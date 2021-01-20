@@ -24,6 +24,9 @@ import {
 	IonImg,
 	IonItemDivider,
 	IonAvatar,
+	IonTabBar,
+	IonTabButton,
+	IonTabs,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -101,24 +104,29 @@ const App: React.FC = () => (
 					</IonToolbar>
 				</IonHeader>
 				<IonContent className="ion-padding">
-					<IonGrid>
-						<IonRow>
-							<IonRouterOutlet>
-								<Route exact path="/" />
-								<Route exact path="/home" component={Home} />
-								<Route exact path="/orders" component={Orders} />
-								<Route
-									exact
-									path="/Categories"
-									component={Categories}
-								/>
-								<Route exact path="/account" component={Account} />
-								<Route exact path="/login" component={LogIn} />
-								<Route exact path="/signup" component={SignUp} />
-								<Redirect exact from="/" to="/home" />
-							</IonRouterOutlet>
-						</IonRow>
-					</IonGrid>
+					<IonTabs>
+						<IonRouterOutlet>
+							<Route exact path="/" />
+							<Route exact path="/home" component={Home} />
+							<Route exact path="/orders" component={Orders} />
+							<Route exact path="/categories" component={Categories} />
+							<Route exact path="/account" component={Account} />
+							<Route exact path="/login" component={LogIn} />
+							<Route exact path="/signup" component={SignUp} />
+							<Redirect exact from="/" to="/home" />
+						</IonRouterOutlet>
+						<IonTabBar slot="bottom">
+							<IonTabButton tab="Categories" href="/categories">
+								<IonIcon icon={locate} />
+							</IonTabButton>
+							<IonTabButton tab="Orders" href="/orders">
+								<IonIcon icon={cart} />
+							</IonTabButton>
+							<IonTabButton tab="Account" href="/account">
+								<IonIcon icon={accessibility} />
+							</IonTabButton>
+						</IonTabBar>
+					</IonTabs>
 				</IonContent>
 			</div>
 		</IonReactRouter>

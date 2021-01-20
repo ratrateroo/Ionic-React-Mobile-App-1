@@ -39,8 +39,17 @@ import {
 const Categories: React.FC = () => {
 	return (
 		<IonPage>
-			<IonContent>
-				<IonText>No Categories Yet</IonText>
+			<IonHeader>
+				<IonToolbar>
+					<IonTitle>Blank</IonTitle>
+				</IonToolbar>
+			</IonHeader>
+			<IonContent fullscreen>
+				<IonHeader collapse="condense">
+					<IonToolbar>
+						<IonTitle size="large">Categories Page</IonTitle>
+					</IonToolbar>
+				</IonHeader>
 			</IonContent>
 		</IonPage>
 	);
