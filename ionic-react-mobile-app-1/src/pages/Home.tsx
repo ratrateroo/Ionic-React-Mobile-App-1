@@ -34,6 +34,7 @@ import {
 	IonChip,
 	IonImg,
 	IonThumbnail,
+	IonCard,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -114,7 +115,7 @@ const Home: React.FC = () => {
 														/>
 
 														<IonText>
-															<h6>{image.text}</h6>
+															<p>{image.text}</p>
 														</IonText>
 													</IonCol>
 												))}
@@ -209,7 +210,7 @@ const Home: React.FC = () => {
 							</IonSlide>
 						</IonSlides>
 					</IonRow>
-					<IonRow>
+					{/* <IonRow>
 						<IonSlides options={slideOpts}>
 							<IonSlide>
 								<IonTitle>Product 1</IonTitle>
@@ -224,29 +225,183 @@ const Home: React.FC = () => {
 								<IonTitle>Product 4</IonTitle>
 							</IonSlide>
 						</IonSlides>
+					</IonRow> */}
+					<IonRow>
+						<IonGrid>
+							<IonRow>
+								<IonCol size="8">
+									<div>
+										<h6>Work from home without worries.</h6>
+										<IonImg src="assets/ELECTRONICDESKTOP_N2_620x420.jpg" />
+									</div>
+								</IonCol>
+								<IonCol size="4">
+									<div>
+										<IonImg src="assets/HOMEDECORDESKTOP_N1_360x420.jpg" />
+										<h5>Up to 30% Off</h5>
+										<p>Style your home</p>
+									</div>
+								</IonCol>
+							</IonRow>
+							<IonRow>
+								<IonCol size="4">
+									<div>
+										<IonImg src="assets/KITCHENEDESKTOP_N1_360x420.jpg" />
+										<h5>Up to 50% Off</h5>
+										<p>Kitchen Must Haves</p>
+									</div>
+								</IonCol>
+								<IonCol size="8">
+									<div>
+										<h6>Get comfy with these bed and bath items.</h6>
+										<IonImg src="assets/BEDBATHDESKTOP_N2_620x420.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+						</IonGrid>
+					</IonRow>
+					<IonRow>
+						<IonGrid>
+							<IonRow>
+								<IonCol size="12">
+									<h5 className="ionTextCenter">Just For You</h5>
+								</IonCol>
+							</IonRow>
+						</IonGrid>
+					</IonRow>
+					<IonRow>
+						<IonGrid>
+							<IonRow>
+								<IonCol size="4">
+									<div>
+										<IonImg src="assets/Men_Homepage_370x430.jpg" />
+									</div>
+								</IonCol>
+								<IonCol size="4">
+									<div>
+										<IonImg src="assets/Women_Homepage_370x430.jpg" />
+									</div>
+								</IonCol>
+								<IonCol size="4">
+									<div>
+										<IonImg src="assets/Kids_Homepage_370x430.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+							<IonRow>
+								<IonCol size="4">
+									<div>
+										<IonImg src="assets/Beauty_Homepage_370x430.jpg" />
+									</div>
+								</IonCol>
+								<IonCol size="4">
+									<div>
+										<IonImg src="assets/Lifestyle_Homepage_370x430.jpg" />
+									</div>
+								</IonCol>
+								<IonCol size="4">
+									<div>
+										<IonImg src="assets/Luxury_Homepage_370x430.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+						</IonGrid>
+					</IonRow>
+
+					<IonRow>
+						<IonGrid>
+							<IonRow>
+								<IonCol size="12">
+									<h5 className="ionTextCenter">Trending</h5>
+								</IonCol>
+							</IonRow>
+						</IonGrid>
+					</IonRow>
+					<IonRow>
+						<IonGrid>
+							<IonRow>
+								<IonCol size="6">
+									<div>
+										<IonImg src="assets/SLEEKSILLHOUETTESDESKTOP_322X300.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+							<IonRow>
+								<IonCol size="6" offset="3">
+									<div>
+										<IonImg src="assets/LIFEMOTIONDESKTOP_322X300.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+							<IonRow>
+								<IonCol size="5" offset="6">
+									<div>
+										<IonImg src="assets/STEPFORWARDDESKTOP_322X300.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+						</IonGrid>
+					</IonRow>
+
+					<IonRow>
+						<IonGrid>
+							<IonRow>
+								<IonCol size="12">
+									<h5 className="ionTextCenter">
+										Latest Affiliated Brands
+									</h5>
+								</IonCol>
+							</IonRow>
+						</IonGrid>
+					</IonRow>
+					<IonRow>
+						<IonGrid>
+							<IonRow>
+								<IonCol>
+									<div>
+										<IonImg src="assets/brand1.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+							<IonRow>
+								<IonCol>
+									<div>
+										<IonImg src="assets/brand2.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+							<IonRow>
+								<IonCol>
+									<div>
+										<IonImg src="assets/brand3.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+							<IonRow>
+								<IonCol>
+									<div>
+										<IonImg src="assets/brand4.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+							<IonRow>
+								<IonCol>
+									<div>
+										<IonImg src="assets/brand5.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+							<IonRow>
+								<IonCol>
+									<div>
+										<IonImg src="assets/brand6.jpg" />
+									</div>
+								</IonCol>
+							</IonRow>
+						</IonGrid>
 					</IonRow>
 				</IonGrid>
 			</IonContent>
-
-			{/* <IonContent>
-				<IonAvatar>
-					<IonIcon size="large" icon={locationOutline}></IonIcon>
-				</IonAvatar>
-
-				<IonChip>
-					<IonAvatar>
-						<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
-					</IonAvatar>
-					<IonLabel>Chip Avatar</IonLabel>
-				</IonChip>
-
-				<IonItem>
-					<IonAvatar slot="start">
-						<img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
-					</IonAvatar>
-					<IonLabel>Item Avatar</IonLabel>
-				</IonItem>
-			</IonContent> */}
 		</IonPage>
 	);
 };
