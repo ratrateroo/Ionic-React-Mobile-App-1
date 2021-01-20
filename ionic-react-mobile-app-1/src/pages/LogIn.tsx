@@ -52,7 +52,7 @@ const LogIn: React.FC = () => {
 			// Camera.getPicture().then((fileUri) => url = fileUri);
 
 			androidFingerprintAuth.isAvailable().then((result) => {
-				//alert('Result ' + JSON.stringify(result));
+				alert('Result ' + JSON.stringify(result));
 				if (result.isHardwareDetected) {
 					alert('Fingerprint Hardware Detected');
 				}
@@ -67,8 +67,8 @@ const LogIn: React.FC = () => {
 						.then((result) => {
 							//alert('Result ' + JSON.stringify(result));
 							if (result.withFingerprint) {
-								//alert('Successfully encrypted credentials.');
-								//alert('Encrypted credentials: ' + result.token);
+								alert('Successfully encrypted credentials.');
+								alert('Encrypted credentials: ' + result.token);
 							} else if (result.withBackup) {
 								alert('Authenticated with backup password');
 							} else {
