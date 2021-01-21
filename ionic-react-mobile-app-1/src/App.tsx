@@ -7,39 +7,20 @@ import {
 	IonTitle,
 	IonContent,
 	IonButtons,
-	IonButton,
-	IonRippleEffect,
 	IonRow,
-	IonText,
 	IonGrid,
 	IonCol,
-	IonItem,
-	IonLabel,
-	IonInput,
-	IonMenu,
-	IonList,
 	IonMenuButton,
 	IonRouterOutlet,
 	IonIcon,
 	IonImg,
-	IonItemDivider,
-	IonAvatar,
 	IonTabBar,
 	IonTabButton,
 	IonTabs,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
-import {
-	home,
-	cart,
-	accessibility,
-	locate,
-	enter,
-	create,
-	personCircleOutline,
-	personOutline,
-} from 'ionicons/icons';
+import { cart, accessibility, locate } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -71,8 +52,6 @@ import Account from './pages/Account';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import Menu from './components/Menu';
-
-import MainPage from './pages/MainPage';
 
 const App: React.FC = () => (
 	<IonApp>

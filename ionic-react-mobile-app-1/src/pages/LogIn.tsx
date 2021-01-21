@@ -1,16 +1,9 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
 
 import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth';
 import {
-	IonApp,
-	IonHeader,
-	IonToolbar,
-	IonTitle,
 	IonContent,
-	IonButtons,
 	IonButton,
-	IonRippleEffect,
 	IonRow,
 	IonText,
 	IonGrid,
@@ -18,27 +11,9 @@ import {
 	IonItem,
 	IonLabel,
 	IonInput,
-	IonMenu,
-	IonList,
-	IonMenuButton,
-	IonRouterOutlet,
-	IonIcon,
 	IonPage,
-	IonAlert,
 	isPlatform,
 } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-
-import {
-	home,
-	cart,
-	accessibility,
-	locate,
-	enter,
-	create,
-	personCircleOutline,
-	personOutline,
-} from 'ionicons/icons';
 
 const LogIn: React.FC = () => {
 	const fingerprintScanner = () => {
