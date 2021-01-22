@@ -1,29 +1,18 @@
 import React from 'react';
 
-import {
-	IonHeader,
-	IonToolbar,
-	IonTitle,
-	IonContent,
-	IonPage,
-} from '@ionic/react';
+import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/react';
+import Head from '../components/head/Head';
 
 const Categories: React.FC = () => {
 	return (
-		<IonPage>
-			<IonHeader>
+		<React.Fragment>
+			<Head />
+			<IonContent>
 				<IonToolbar>
-					<IonTitle>Blank</IonTitle>
+					<IonTitle size="large">Categories Page</IonTitle>
 				</IonToolbar>
-			</IonHeader>
-			<IonContent fullscreen>
-				<IonHeader collapse="condense">
-					<IonToolbar>
-						<IonTitle size="large">Categories Page</IonTitle>
-					</IonToolbar>
-				</IonHeader>
 			</IonContent>
-		</IonPage>
+		</React.Fragment>
 	);
 };
 

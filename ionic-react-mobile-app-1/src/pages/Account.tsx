@@ -7,23 +7,18 @@ import {
 	IonContent,
 	IonPage,
 } from '@ionic/react';
+import Head from '../components/head/Head';
 
 const Account: React.FC = () => {
 	return (
-		<IonPage>
-			<IonHeader>
+		<React.Fragment>
+			<Head />
+			<IonContent>
 				<IonToolbar>
-					<IonTitle>Blank</IonTitle>
+					<IonTitle size="large">Account Page</IonTitle>
 				</IonToolbar>
-			</IonHeader>
-			<IonContent fullscreen>
-				<IonHeader collapse="condense">
-					<IonToolbar>
-						<IonTitle size="large">Account Page</IonTitle>
-					</IonToolbar>
-				</IonHeader>
 			</IonContent>
-		</IonPage>
+		</React.Fragment>
 	);
 };
 

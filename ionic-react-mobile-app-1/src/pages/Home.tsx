@@ -32,6 +32,7 @@ import {
 import Account from './Account';
 import Orders from './Orders';
 import Categories from './Categories';
+import Head from '../components/head/Head';
 
 type Item = {
 	src: string;
@@ -42,7 +43,7 @@ const items: Item[] = [
 	{ src: 'assets/idea.png', text: 'Good Deals' },
 	{ src: 'assets/house.png', text: 'Home' },
 	{ src: 'assets/book.png', text: 'Books' },
-	{ src: 'assets/smartphone.png', text: 'Electronics' },
+	{ src: 'assets/smartphone.png', text: 'Gadgets' },
 	{ src: 'assets/heart.png', text: 'Health' },
 ];
 
@@ -54,17 +55,9 @@ const slideOpts = {
 
 const Home: React.FC = () => {
 	return (
-		<IonContent>
-			<IonSearchbar className="searchbar" />
-
-			{/* <IonContent fullscreen>
-				<IonHeader collapse="condense">
-					<IonToolbar>
-						<IonTitle size="large">Blank</IonTitle>
-					</IonToolbar>
-				</IonHeader>
-			</IonContent> */}
-			<IonContent className="mainpage">
+		<React.Fragment>
+			<Head />
+			<IonContent className="homepage" id="bg">
 				<IonGrid>
 					<IonRow>
 						<IonCol>
@@ -87,15 +80,17 @@ const Home: React.FC = () => {
 										<IonGrid>
 											<IonRow>
 												{items.map((image, i) => (
-													<IonCol key={i}>
-														<IonImg
-															className="categoryicons"
-															src={image.src}
-														/>
+													<IonCol key={i} size="auto">
+														<div className="icon-holder">
+															<IonImg
+																className="categoryicons"
+																src={image.src}
+															/>
+														</div>
 
-														<IonText>
+														<div className="icon-name-holder">
 															<p>{image.text}</p>
-														</IonText>
+														</div>
 													</IonCol>
 												))}
 											</IonRow>
@@ -318,7 +313,7 @@ const Home: React.FC = () => {
 							<IonRow>
 								<IonCol size="12">
 									<IonToolbar className="ion-text-center">
-										<IonButton color="danger">
+										<IonButton color="danger" expand="full">
 											Discover More Brands
 										</IonButton>
 									</IonToolbar>
@@ -326,6 +321,8 @@ const Home: React.FC = () => {
 							</IonRow>
 						</IonGrid>
 					</IonRow>
+				</IonGrid>
+				<IonGrid>
 					<IonRow>
 						<IonCol size="4">
 							<p className="ion-text-center">Contact</p>
@@ -348,31 +345,44 @@ const Home: React.FC = () => {
 							<p className="ion-text-center">Privacy Policy</p>
 						</IonCol>
 					</IonRow>
+				</IonGrid>
+				<IonGrid>
 					<IonRow>
 						<IonCol size="4">
-							<p className="ion-text-center"></p>
+							<p className="ion-text-center"> </p>
 						</IonCol>
 						<IonCol size="4">
-							<p className="ion-text-center"></p>
+							<p className="ion-text-center"> </p>
 						</IonCol>
 						<IonCol size="4">
-							<p className="ion-text-center"></p>
+							<p className="ion-text-center"> </p>
 						</IonCol>
 					</IonRow>
 					<IonRow>
 						<IonCol size="4">
-							<p className="ion-text-center"></p>
+							<p className="ion-text-center"> </p>
 						</IonCol>
 						<IonCol size="4">
-							<p className="ion-text-center"></p>
+							<p className="ion-text-center"> </p>
 						</IonCol>
 						<IonCol size="4">
-							<p className="ion-text-center"></p>
+							<p className="ion-text-center"> </p>
+						</IonCol>
+					</IonRow>
+					<IonRow>
+						<IonCol size="4">
+							<p className="ion-text-center">FAQ</p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center">Terms and Conditions</p>
+						</IonCol>
+						<IonCol size="4">
+							<p className="ion-text-center">Privacy Policy</p>
 						</IonCol>
 					</IonRow>
 				</IonGrid>
 			</IonContent>
-			<IonContent>
+			{/* <IonContent>
 				<IonTabs>
 					<IonRouterOutlet>
 						<Route
@@ -400,8 +410,8 @@ const Home: React.FC = () => {
 						</IonTabButton>
 					</IonTabBar>
 				</IonTabs>
-			</IonContent>
-		</IonContent>
+			</IonContent> */}
+		</React.Fragment>
 	);
 };
 

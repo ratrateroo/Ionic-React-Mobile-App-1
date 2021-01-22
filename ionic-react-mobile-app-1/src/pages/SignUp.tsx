@@ -10,12 +10,13 @@ import {
 	IonItem,
 	IonLabel,
 	IonInput,
-	IonPage,
 } from '@ionic/react';
+import Head from '../components/head/Head';
 
 const SignUp: React.FC = () => {
 	return (
-		<IonPage>
+		<React.Fragment>
+			<Head />
 			<IonContent className="ion-padding">
 				<IonGrid>
 					<IonRow>
@@ -52,7 +53,7 @@ const SignUp: React.FC = () => {
 					</IonRow>
 				</IonGrid>
 			</IonContent>
-		</IonPage>
+		</React.Fragment>
 	);
 };
 

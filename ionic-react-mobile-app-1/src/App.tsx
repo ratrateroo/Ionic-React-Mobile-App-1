@@ -42,6 +42,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 /* Custom Styling */
 import './styles/customstyles.css';
+import './theme/styles.scss';
 
 import './App.css';
 
@@ -59,54 +60,29 @@ const App: React.FC = () => (
 			<Menu />
 
 			<div className="ion-page" id="main-part">
-				<IonHeader>
-					<IonToolbar color="primary">
-						<IonGrid>
-							<IonRow>
-								<IonCol size="2">
-									<IonButtons>
-										<IonMenuButton></IonMenuButton>
-									</IonButtons>
-								</IonCol>
-								<IonCol size="7">
-									<div className="ion-text-center">
-										<IonTitle size="small">
-											<h4>Shopping While Black</h4>
-										</IonTitle>
-									</div>
-								</IonCol>
-								<IonCol size="3">
-									<IonImg src="assets/Asset 1.png" />
-								</IonCol>
-							</IonRow>
-						</IonGrid>
-					</IonToolbar>
-				</IonHeader>
-				<IonContent className="ion-padding">
-					<IonTabs>
-						<IonRouterOutlet>
-							<Route exact path="/" />
-							<Route exact path="/home" component={Home} />
-							<Route exact path="/orders" component={Orders} />
-							<Route exact path="/categories" component={Categories} />
-							<Route exact path="/account" component={Account} />
-							<Route exact path="/login" component={LogIn} />
-							<Route exact path="/signup" component={SignUp} />
-							<Redirect exact from="/" to="/home" />
-						</IonRouterOutlet>
-						<IonTabBar slot="bottom">
-							<IonTabButton tab="Categories" href="/categories">
-								<IonIcon icon={locate} />
-							</IonTabButton>
-							<IonTabButton tab="Orders" href="/orders">
-								<IonIcon icon={cart} />
-							</IonTabButton>
-							<IonTabButton tab="Account" href="/account">
-								<IonIcon icon={accessibility} />
-							</IonTabButton>
-						</IonTabBar>
-					</IonTabs>
-				</IonContent>
+				<IonTabs>
+					<IonRouterOutlet>
+						<Route exact path="/" />
+						<Route exact path="/home" component={Home} />
+						<Route exact path="/orders" component={Orders} />
+						<Route exact path="/categories" component={Categories} />
+						<Route exact path="/account" component={Account} />
+						<Route exact path="/login" component={LogIn} />
+						<Route exact path="/signup" component={SignUp} />
+						<Redirect exact from="/" to="/home" />
+					</IonRouterOutlet>
+					<IonTabBar slot="bottom">
+						<IonTabButton tab="Categories" href="/categories">
+							<IonIcon icon={locate} />
+						</IonTabButton>
+						<IonTabButton tab="Orders" href="/orders">
+							<IonIcon icon={cart} />
+						</IonTabButton>
+						<IonTabButton tab="Account" href="/account">
+							<IonIcon icon={accessibility} />
+						</IonTabButton>
+					</IonTabBar>
+				</IonTabs>
 			</div>
 		</IonReactRouter>
 	</IonApp>

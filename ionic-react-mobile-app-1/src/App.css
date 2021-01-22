@@ -2,3 +2,70 @@ ion-img::part(image) {
 	width: 100%;
 	height: 100%;
 }
+
+/* ion-content::part(scroll) {
+	overflow: scroll;
+	overflow-x: hidden;
+} */
+
+::-webkit-scrollbar {
+	/*width: 0px;  Remove scrollbar space */
+	/*background: transparent;  Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red 
+::-webkit-scrollbar-thumb {
+	background: #ff0000;
+}
+*/
+
+.homepage {
+	--background: yellow;
+}
+
+/* .homepage::part(scroll) {
+	overflow: scroll;
+	overflow-x: hidden;
+} */
+/* .homepage::-webkit-scrollbar {
+	display: none;
+} */
+
+.ion-page {
+	background: white;
+}
+
+ion-content {
+	--offset-bottom: auto !important;
+	--overflow: hidden;
+	overflow: auto;
+}
+/* ion-content::-webkit-scrollbar {
+	width: 1px;
+	display: none;
+} */
+
+ion-content::part(background) {
+	--background: yellow !important;
+}
+
+ion-content::-webkit-scrollbar {
+	width: 3px;
+}
+
+ion-content::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 1px;
+}
+
+ion-content::-webkit-scrollbar-thumb {
+	border-radius: 1px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.icon-holder ion-img::part(image) {
+	width: 20px;
+}
+
+.icon-name-holder p {
+	font-size: 0.6rem !important;
+}
