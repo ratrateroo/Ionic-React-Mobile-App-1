@@ -35,7 +35,7 @@ import '@ionic/react/css/display.css';
 
 const Head: React.FC = () => (
 	<IonHeader translucent>
-		<IonToolbar color="dark">
+		<IonToolbar color="orange">
 			<IonGrid>
 				<IonRow>
 					<IonCol size="2">
