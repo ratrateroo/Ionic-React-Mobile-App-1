@@ -123,4 +123,55 @@
 		--ion-color-shade: var(--ion-color-redorange-shade);
 		--ion-color-tint: var(--ion-color-redorange-tint);
 	}
+
+	/** brand stone**/
+	--ion-color-stone: #dcdcdc;
+	--ion-color-stone-rgb: 220, 220, 220;
+	--ion-color-stone-contrast: #000000;
+	--ion-color-stone-contrast-rgb: 0, 0, 0;
+	--ion-color-stone-shade: #949494;
+	--ion-color-stone-tint: #e9e9e9;
+
+	.ion-color-stone {
+		--ion-color-base: var(--ion-color-stone);
+		--ion-color-base-rgb: var(--ion-color-stone-rgb);
+		--ion-color-contrast: var(--ion-color-stone-contrast);
+		--ion-color-contrast-rgb: var(--ion-color-stone-contrast-rgb);
+		--ion-color-shade: var(--ion-color-stone-shade);
+		--ion-color-tint: var(--ion-color-stone-tint);
+	}
+
+	/** brand rock**/
+	--ion-color-rock: #707070;
+	--ion-color-rock-rgb: 112, 112, 112;
+	--ion-color-rock-contrast: #000000;
+	--ion-color-rock-contrast-rgb: 0, 0, 0;
+	--ion-color-rock-shade: #585858;
+	--ion-color-rock-tint: #9b9999;
+
+	.ion-color-rock {
+		--ion-color-base: var(--ion-color-rock);
+		--ion-color-base-rgb: var(--ion-color-rock-rgb);
+		--ion-color-contrast: var(--ion-color-rock-contrast);
+		--ion-color-contrast-rgb: var(--ion-color-rock-contrast-rgb);
+		--ion-color-shade: var(--ion-color-rock-shade);
+		--ion-color-tint: var(--ion-color-rock-tint);
+	}
+
+	/** brand coal**/
+	--ion-color-coal: #545454;
+	--ion-color-coal-rgb: 84, 84, 84;
+	--ion-color-redorange-contrast: #ffffff;
+	--ion-color-redorange-contrast-rgb: 255, 255, 255;
+	--ion-color-coal-shade: #383838;
+	--ion-color-coal-tint: #7a7a7a;
+
+	.ion-color-coal {
+		--ion-color-base: var(--ion-color-coal);
+		--ion-color-base-rgb: var(--ion-color-coal-rgb);
+		--ion-color-contrast: var(--ion-color-coal-contrast);
+		--ion-color-contrast-rgb: var(--ion-color-coal-contrast-rgb);
+		--ion-color-shade: var(--ion-color-coal-shade);
+		--ion-color-tint: var(--ion-color-coal-tint);
+	}
 }

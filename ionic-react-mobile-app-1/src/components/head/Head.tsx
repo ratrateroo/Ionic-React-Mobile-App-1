@@ -55,7 +55,7 @@ const Head: React.FC = () => (
 					</IonCol>
 				</IonRow>
 			</IonGrid>
-			<IonSearchbar className="searchbar" />
+			<IonSearchbar className="searchbar" color="light" />
 		</IonToolbar>
 	</IonHeader>
 );
