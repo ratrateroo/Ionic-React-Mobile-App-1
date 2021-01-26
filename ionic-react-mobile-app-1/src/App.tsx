@@ -39,6 +39,7 @@ import './App.css';
 import Home from './pages/Home';
 import Orders from './pages/Orders';
 import Products from './pages/Products';
+import Product from './pages/Product';
 
 import Categories from './pages/Categories';
 import Account from './pages/Account';
@@ -58,6 +59,8 @@ const App: React.FC = () => (
 						<Route exact path="/home" component={Home} />
 						<Route exact path="/orders" component={Orders} />
 						<Route exact path="/products" component={Products} />
+						<Route exact path="/product" component={Product} />
+
 						<Route exact path="/categories" component={Categories} />
 						<Route exact path="/account" component={Account} />
 						<Route exact path="/login" component={LogIn} />

@@ -1,0 +1,15 @@
+.product-main-name h3 {
+	font-weight: bold;
+}
+
+.product-rating h5 {
+	height: 1rem;
+	font-weight: bold;
+	padding: 0;
+}
+
+.product-brand-name h5 {
+	font-weight: bold;
+	height: 1rem;
+	line-height: 1rem;
+}
