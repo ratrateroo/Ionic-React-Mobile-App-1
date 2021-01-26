@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+
 import './Home.css';
 import {
 	IonToolbar,
@@ -10,28 +10,15 @@ import {
 	IonGrid,
 	IonCol,
 	IonItem,
-	IonRouterOutlet,
 	IonIcon,
-	IonSearchbar,
 	IonSlides,
 	IonSlide,
 	IonImg,
 	IonCard,
-	IonTabs,
-	IonTabBar,
-	IonTabButton,
 } from '@ionic/react';
 
-import {
-	cart,
-	accessibility,
-	locate,
-	locationOutline,
-	caretDown,
-} from 'ionicons/icons';
-import Account from './Account';
-import Orders from './Orders';
-import Categories from './Categories';
+import { locationOutline, caretDown } from 'ionicons/icons';
+
 import Head from '../components/head/Head';
 
 type Item = {

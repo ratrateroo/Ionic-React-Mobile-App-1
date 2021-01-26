@@ -1,0 +1,32 @@
+.productssearch {
+	--border-radius: 5px;
+	border: 1px solid black;
+}
+
+.selectionbutton::part(native) {
+	text-align: left;
+}
+
+.productitembrand p {
+	padding: 1rem 1rem 0 1rem;
+	font-weight: bold;
+	word-wrap: break-word;
+}
+
+.productitemtitle p {
+	text-align: left;
+	padding: 0 1rem 0 1rem;
+	font-size: 1rem;
+	font-weight: bolder;
+	word-wrap: break-word;
+}
+
+.productitemprice {
+	text-align: right;
+	font-weight: bold;
+	padding-right: 1rem;
+	font-size: 1rem;
+}
+.productcard {
+	box-shadow: 3px 3px 5px #ccc;
+}

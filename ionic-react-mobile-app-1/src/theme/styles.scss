@@ -42,8 +42,8 @@
 
 	--ion-color-lightpurple: #42144a;
 	--ion-color-lightpurple-rgb: 66, 20, 74;
-	--ion-color-lightpurple-contrast: #000000;
-	--ion-color-lightpurple-contrast-rgb: 0, 0, 0;
+	--ion-color-lightpurple-contrast: #ffffff;
+	--ion-color-lightpurple-contrast-rgb: 255, 255, 255;
 	--ion-color-lightpurple-shade: #2e0735;
 	--ion-color-lightpurple-tint: rgb(91, 16, 104);
 
@@ -173,5 +173,10 @@
 		--ion-color-contrast-rgb: var(--ion-color-coal-contrast-rgb);
 		--ion-color-shade: var(--ion-color-coal-shade);
 		--ion-color-tint: var(--ion-color-coal-tint);
+	}
+
+	--ion-border-searchbar: 1px solid black;
+	.ion-border-searchbar {
+		--ion-border-searchbar: var(--ion-border-searchbar);
 	}
 }

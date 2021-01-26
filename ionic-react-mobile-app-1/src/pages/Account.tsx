@@ -1,12 +1,6 @@
 import React from 'react';
 
-import {
-	IonHeader,
-	IonToolbar,
-	IonTitle,
-	IonContent,
-	IonPage,
-} from '@ionic/react';
+import { IonToolbar, IonTitle, IonContent } from '@ionic/react';
 import Head from '../components/head/Head';
 
 const Account: React.FC = () => {

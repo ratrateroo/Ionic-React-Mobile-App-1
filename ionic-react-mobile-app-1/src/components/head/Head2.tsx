@@ -10,7 +10,6 @@ import {
 	IonCol,
 	IonMenuButton,
 	IonImg,
-	IonSearchbar,
 } from '@ionic/react';
 
 /* Core CSS required for Ionic components to work properly */
@@ -28,13 +27,12 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
-import { heart } from 'ionicons/icons';
 
 /* Theme variables */
 
 /* Custom Styling */
 
-const Head: React.FC = () => (
+const Head2: React.FC = () => (
 	<IonHeader translucent>
 		<IonToolbar color="darkpurple">
 			<IonGrid>
@@ -56,9 +54,8 @@ const Head: React.FC = () => (
 					</IonCol>
 				</IonRow>
 			</IonGrid>
-			<IonSearchbar className="searchbar" color="light" />
 		</IonToolbar>
 	</IonHeader>
 );
 
-export default Head;
+export default Head2;

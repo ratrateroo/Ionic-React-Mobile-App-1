@@ -13,7 +13,7 @@ import {
 	IonInput,
 	isPlatform,
 } from '@ionic/react';
-import Head from '../components/head/Head';
+import Head2 from '../components/head/Head2';
 
 const LogIn: React.FC = () => {
 	const fingerprintScanner = () => {
@@ -62,7 +62,7 @@ const LogIn: React.FC = () => {
 
 	return (
 		<React.Fragment>
-			<Head />
+			<Head2 />
 			<IonContent className="ion-padding">
 				<IonGrid>
 					<IonRow>

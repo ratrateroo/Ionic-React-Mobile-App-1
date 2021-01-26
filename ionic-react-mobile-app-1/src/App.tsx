@@ -2,18 +2,8 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import {
 	IonApp,
-	IonHeader,
-	IonToolbar,
-	IonTitle,
-	IonContent,
-	IonButtons,
-	IonRow,
-	IonGrid,
-	IonCol,
-	IonMenuButton,
 	IonRouterOutlet,
 	IonIcon,
-	IonImg,
 	IonTabBar,
 	IonTabButton,
 	IonTabs,
@@ -48,6 +38,8 @@ import './App.css';
 
 import Home from './pages/Home';
 import Orders from './pages/Orders';
+import Products from './pages/Products';
+
 import Categories from './pages/Categories';
 import Account from './pages/Account';
 import LogIn from './pages/LogIn';
@@ -65,6 +57,7 @@ const App: React.FC = () => (
 						<Route exact path="/" />
 						<Route exact path="/home" component={Home} />
 						<Route exact path="/orders" component={Orders} />
+						<Route exact path="/products" component={Products} />
 						<Route exact path="/categories" component={Categories} />
 						<Route exact path="/account" component={Account} />
 						<Route exact path="/login" component={LogIn} />
