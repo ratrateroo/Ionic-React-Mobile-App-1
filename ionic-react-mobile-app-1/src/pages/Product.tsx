@@ -423,6 +423,34 @@ const Product: React.FC = () => {
 				</IonGrid>
 				<IonGrid>
 					<IonRow>
+						<IonCol size="4" className="ion-no-padding">
+							<IonButton
+								className="bottom-buttons"
+								color="lightpurple"
+								expand="full">
+								Top
+							</IonButton>
+						</IonCol>
+						<IonCol size="4" className="ion-no-padding">
+							<IonButton
+								className="bottom-buttons"
+								color="cyan"
+								expand="full">
+								Details
+							</IonButton>
+						</IonCol>
+						<IonCol size="4" className="ion-no-padding">
+							<IonButton
+								className="bottom-buttons"
+								color="orange"
+								expand="full">
+								Reviews
+							</IonButton>
+						</IonCol>
+					</IonRow>
+				</IonGrid>
+				<IonGrid>
+					<IonRow>
 						<IonCol>Spacer</IonCol>
 					</IonRow>
 					<IonRow>
