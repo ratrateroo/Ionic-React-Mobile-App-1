@@ -1,56 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import {
 	IonButton,
-	IonButtons,
-	IonCard,
 	IonCol,
 	IonContent,
 	IonGrid,
 	IonIcon,
 	IonImg,
-	IonItem,
-	IonItemDivider,
-	IonItemGroup,
-	IonItemOption,
-	IonItemOptions,
-	IonItemSliding,
-	IonLabel,
-	IonList,
-	IonListHeader,
-	IonNote,
-	IonPopover,
 	IonRow,
-	IonSearchbar,
-	IonSelect,
-	IonSelectOption,
 	IonText,
-	IonTitle,
 } from '@ionic/react';
 import Head2 from '../components/head/Head2';
 
 import './Products.css';
-import {
-	arrowDown,
-	caretDownOutline,
-	ellipsisHorizontal,
-	ellipsisVertical,
-	heart,
-	heartOutline,
-	personCircle,
-	search,
-	star,
-} from 'ionicons/icons';
+import { caretDownOutline, heart } from 'ionicons/icons';
 
 const Products: React.FC = () => {
-	const [gender, setGender] = useState<string>();
-	const [hairColor, setHairColor] = useState<string>('brown');
-	const [popoverState, setShowPopover] = useState({
-		showPopover: false,
-		event: undefined,
-	});
-
 	const history = useHistory();
 
 	const routeChange = () => {

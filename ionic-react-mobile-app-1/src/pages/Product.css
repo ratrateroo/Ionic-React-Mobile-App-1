@@ -23,3 +23,129 @@
 	border: 1px solid black;
 	padding: 0;
 }
+
+.product-color-name h5 {
+	font-weight: bold;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+.product-availability h4 {
+	font-weight: bold;
+}
+
+.product-quantity {
+	font-weight: bold;
+}
+
+.product-price {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: bold;
+	font-size: 1.3rem;
+	height: 3rem;
+	border-bottom: 3px solid var(--ion-color-redorange);
+}
+
+.product-add-to-cart {
+	font-weight: bold;
+}
+
+.product-buy-now {
+	font-weight: bold;
+}
+
+.product-sold-by {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.product-sold-by-brand {
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: var(--ion-color-redorange);
+}
+
+.product-description-title {
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: var(--ion-color-lightpurple);
+}
+.product-description-content {
+	font-weight: 500;
+	font-size: 1rem;
+	text-align: justify;
+	color: var(--ion-color-coal);
+}
+
+.product-information-title {
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: var(--ion-color-lightpurple);
+}
+
+.product-information-table {
+	width: 100%;
+	background-color: var(--ion-color-stone);
+}
+
+.product-table {
+	width: 100%;
+}
+.product-table-head tr {
+	background: var(--ion-color-darkpurple);
+	width: 100%;
+	height: 1.3rem;
+}
+
+.product-table-head tr th {
+	color: var(--ion-color-stone);
+	padding: 0.8rem;
+	text-align: left;
+	text-transform: capitalize;
+	word-wrap: break-word;
+}
+
+.product-table-body tr th {
+	background: var(--ion-color-lightpurple);
+	color: var(--ion-color-stone);
+	padding: 0.8rem;
+	text-align: left;
+	text-transform: capitalize;
+	word-wrap: break-word;
+}
+
+.product-table-body tr td {
+	color: var(--ion-color-rock);
+	padding: 0.8rem;
+	text-align: left;
+	text-transform: capitalize;
+	word-wrap: break-word;
+}
+
+.product-review-container {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.product-review-title {
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: var(--ion-color-lightpurple);
+}
+.product-review-content {
+	font-weight: 500;
+	font-size: 1rem;
+	text-align: justify;
+	color: var(--ion-color-coal);
+}
+
+.product-review-author {
+	color: var(--ion-color-lightpurple);
+}
+
+.product-review-author-name {
+	color: var(--ion-color-orange);
+	font-weight: bold;
+}
