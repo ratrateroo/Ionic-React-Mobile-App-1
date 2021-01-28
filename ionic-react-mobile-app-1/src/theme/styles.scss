@@ -175,6 +175,24 @@
 		--ion-color-tint: var(--ion-color-coal-tint);
 	}
 
+	/** brand red**/
+
+	--ion-color-red: #df1717;
+	--ion-color-red-rgb: 223, 23, 23;
+	--ion-color-redorange-contrast: #ffffff;
+	--ion-color-redorange-contrast-rgb: 255, 255, 255;
+	--ion-color-red-shade: #a00707;
+	--ion-color-red-tint: #f16969;
+
+	.ion-color-red {
+		--ion-color-base: var(--ion-color-red);
+		--ion-color-base-rgb: var(--ion-color-red-rgb);
+		--ion-color-contrast: var(--ion-color-red-contrast);
+		--ion-color-contrast-rgb: var(--ion-color-red-contrast-rgb);
+		--ion-color-shade: var(--ion-color-red-shade);
+		--ion-color-tint: var(--ion-color-red-tint);
+	}
+
 	--ion-border-searchbar: 1px solid black;
 	.ion-border-searchbar {
 		--ion-border-searchbar: var(--ion-border-searchbar);

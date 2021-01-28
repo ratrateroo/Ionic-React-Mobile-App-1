@@ -254,7 +254,7 @@ const Product: React.FC = () => {
 								className="product-buy-now"
 								color="darkpurple"
 								expand="block">
-								But Now
+								Buy Now
 							</IonButton>
 						</IonCol>
 

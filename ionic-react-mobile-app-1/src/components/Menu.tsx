@@ -20,6 +20,7 @@ import {
 	enter,
 	create,
 	cube,
+	gift,
 } from 'ionicons/icons';
 
 const Menu: React.FC = () => {
@@ -43,6 +44,10 @@ const Menu: React.FC = () => {
 					<IonItem routerLink="/orders">
 						<IonIcon icon={cart} slot="start"></IonIcon>
 						<IonLabel>Orders</IonLabel>
+					</IonItem>
+					<IonItem routerLink="/wishlist">
+						<IonIcon icon={gift} slot="start"></IonIcon>
+						<IonLabel>Wish List</IonLabel>
 					</IonItem>
 					<IonItem routerLink="/account">
 						<IonIcon icon={accessibility} slot="start"></IonIcon>
