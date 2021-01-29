@@ -14,7 +14,13 @@ import {
 	IonImg,
 } from '@ionic/react';
 import Head2 from '../components/head/Head2';
-import { caretDownOutline, cart } from 'ionicons/icons';
+import {
+	caretDownOutline,
+	cart,
+	cartOutline,
+	trashBinOutline,
+	trashOutline,
+} from 'ionicons/icons';
 import './WishList.css';
 const WishList: React.FC = () => {
 	return (
@@ -46,13 +52,13 @@ const WishList: React.FC = () => {
 				<IonGrid>
 					<div className="wishlist-item-card">
 						<IonRow>
-							<IonCol size="4">
+							<IonCol size="3">
 								<IonImg
 									className="withlist-image"
 									src="assets/products/product1.jpg"
 								/>
 							</IonCol>
-							<IonCol size="4">
+							<IonCol size="6">
 								<IonText className="" color="darkpurple">
 									<p>Evil Eye Necklace</p>
 								</IonText>
@@ -63,12 +69,22 @@ const WishList: React.FC = () => {
 									<p>$ 165.37</p>
 								</IonText>
 							</IonCol>
-							<IonCol size="4">
-								<IonButton color="orange" expand="block" size="small">
-									Add to Cart
+							<IonCol size="3">
+								<IonButton
+									className="productitemadd"
+									color="lightpurple">
+									<IonIcon
+										icon={cartOutline}
+										slot="icon-only"
+										about="Add to wish list"
+									/>
 								</IonButton>
-								<IonButton color="red" expand="block" size="small">
-									Delete
+								<IonButton className="productitemadd" color="red">
+									<IonIcon
+										icon={trashBinOutline}
+										slot="icon-only"
+										about="Add to wish list"
+									/>
 								</IonButton>
 							</IonCol>
 						</IonRow>
@@ -78,8 +94,17 @@ const WishList: React.FC = () => {
 				<IonGrid>
 					<IonRow>
 						<IonCol>
+							<IonButton color="orange" expand="full">
+								Continue shopping
+							</IonButton>
+						</IonCol>
+					</IonRow>
+				</IonGrid>
+				<IonGrid>
+					<IonRow>
+						<IonCol>
 							<IonButton color="darkpurple" expand="full">
-								Continue Shopping
+								Go to my cart
 							</IonButton>
 						</IonCol>
 					</IonRow>
