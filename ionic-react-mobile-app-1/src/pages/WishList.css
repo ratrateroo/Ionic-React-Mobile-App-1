@@ -1,3 +1,18 @@
 .wish-list-title {
 	font-weight: bold;
 }
+
+.cart-item-number {
+	color: var(--ion-color-red);
+	position: absolute;
+	top: 1px;
+	background-color: greenyellow;
+}
+
+.wishlist-item-card {
+	box-shadow: 3px 3px 5px #ccc;
+}
+
+.wishlist-image::part(image) {
+	width: 30px;
+}
