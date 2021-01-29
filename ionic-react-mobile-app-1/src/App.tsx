@@ -54,22 +54,22 @@ const App: React.FC = () => (
 			<Menu />
 
 			<div className="ion-page" id="main-part">
-				<IonTabs>
-					<IonRouterOutlet>
-						<Route exact path="/" />
-						<Route exact path="/home" component={Home} />
-						<Route exact path="/cart" component={Cart} />
-						<Route exact path="/products" component={Products} />
-						<Route exact path="/product" component={Product} />
-						<Route exact path="/wishlist" component={WishList} />
+				{/* <IonTabs> */}
+				<IonRouterOutlet>
+					<Route exact path="/" />
+					<Route exact path="/home" component={Home} />
+					<Route exact path="/cart" component={Cart} />
+					<Route exact path="/products" component={Products} />
+					<Route exact path="/product" component={Product} />
+					<Route exact path="/wishlist" component={WishList} />
 
-						<Route exact path="/categories" component={Categories} />
-						<Route exact path="/account" component={Account} />
-						<Route exact path="/login" component={LogIn} />
-						<Route exact path="/signup" component={SignUp} />
-						<Redirect exact from="/" to="/home" />
-					</IonRouterOutlet>
-					<IonTabBar slot="bottom">
+					<Route exact path="/categories" component={Categories} />
+					<Route exact path="/account" component={Account} />
+					<Route exact path="/login" component={LogIn} />
+					<Route exact path="/signup" component={SignUp} />
+					<Redirect exact from="/" to="/home" />
+				</IonRouterOutlet>
+				{/* <IonTabBar slot="bottom">
 						<IonTabButton tab="Categories" href="/categories">
 							<IonIcon icon={locate} />
 						</IonTabButton>
@@ -79,8 +79,8 @@ const App: React.FC = () => (
 						<IonTabButton tab="Account" href="/account">
 							<IonIcon icon={accessibility} />
 						</IonTabButton>
-					</IonTabBar>
-				</IonTabs>
+					</IonTabBar> */}
+				{/* </IonTabs> */}
 			</div>
 		</IonReactRouter>
 	</IonApp>

@@ -10,6 +10,7 @@ import {
 	IonImg,
 	IonRow,
 	IonText,
+	IonToolbar,
 } from '@ionic/react';
 import Head2 from '../components/head/Head2';
 
@@ -27,7 +28,7 @@ const Products: React.FC = () => {
 	return (
 		<React.Fragment>
 			<Head2 />
-			<IonContent fullscreen>
+			<IonContent>
 				{/* <IonSearchbar className="productssearch" color="light" /> */}
 				<IonGrid>
 					<IonRow>
@@ -373,7 +374,7 @@ const Products: React.FC = () => {
 						</IonCol>
 					</IonRow>
 				</IonGrid>
-				<IonGrid>
+				{/* <IonGrid>
 					<IonRow>
 						<IonCol size="6">
 							<IonButton color="cyan" expand="block" strong={true}>
@@ -404,8 +405,11 @@ const Products: React.FC = () => {
 							</IonButton>
 						</IonCol>
 					</IonRow>
-				</IonGrid>
+				</IonGrid> */}
 			</IonContent>
+			<IonToolbar>
+				<IonText>bottomtext</IonText>
+			</IonToolbar>
 		</React.Fragment>
 	);
 };
