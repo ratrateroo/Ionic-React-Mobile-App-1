@@ -41,14 +41,15 @@ const Menu: React.FC = () => {
 						<IonIcon icon={cube} slot="start"></IonIcon>
 						<IonLabel>Products</IonLabel>
 					</IonItem>
-					<IonItem routerLink="/orders">
+					<IonItem routerLink="/cart">
 						<IonIcon icon={cart} slot="start"></IonIcon>
-						<IonLabel>Orders</IonLabel>
+						<IonLabel>Cart</IonLabel>
 					</IonItem>
 					<IonItem routerLink="/wishlist">
 						<IonIcon icon={gift} slot="start"></IonIcon>
 						<IonLabel>Wish List</IonLabel>
 					</IonItem>
+
 					<IonItem routerLink="/account">
 						<IonIcon icon={accessibility} slot="start"></IonIcon>
 						<IonLabel>Account</IonLabel>

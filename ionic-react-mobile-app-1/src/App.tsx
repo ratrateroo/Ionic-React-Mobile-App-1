@@ -37,7 +37,7 @@ import './theme/styles.scss';
 import './App.css';
 
 import Home from './pages/Home';
-import Orders from './pages/Orders';
+import Cart from './pages/Cart';
 import Products from './pages/Products';
 import Product from './pages/Product';
 import WishList from './pages/WishList';
@@ -58,7 +58,7 @@ const App: React.FC = () => (
 					<IonRouterOutlet>
 						<Route exact path="/" />
 						<Route exact path="/home" component={Home} />
-						<Route exact path="/orders" component={Orders} />
+						<Route exact path="/cart" component={Cart} />
 						<Route exact path="/products" component={Products} />
 						<Route exact path="/product" component={Product} />
 						<Route exact path="/wishlist" component={WishList} />
@@ -73,7 +73,7 @@ const App: React.FC = () => (
 						<IonTabButton tab="Categories" href="/categories">
 							<IonIcon icon={locate} />
 						</IonTabButton>
-						<IonTabButton tab="Orders" href="/orders">
+						<IonTabButton tab="Cart" href="/Cart">
 							<IonIcon icon={cart} />
 						</IonTabButton>
 						<IonTabButton tab="Account" href="/account">
