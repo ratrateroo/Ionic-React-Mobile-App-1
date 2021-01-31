@@ -149,3 +149,9 @@
 	color: var(--ion-color-orange);
 	font-weight: bold;
 }
+
+.grid-image-gallery::part(image) {
+	height: 100%;
+
+	object-fit: contain;
+}

@@ -1,0 +1,15 @@
+.productssearch {
+	--border-radius: 5px;
+}
+
+.categories-title {
+	font-weight: bold;
+}
+
+.category-buttons::part(native) {
+	font-weight: bold;
+}
+
+.category-selected {
+	border: 1px solid var(--ion-color-lightpurple);
+}

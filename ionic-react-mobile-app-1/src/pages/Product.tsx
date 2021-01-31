@@ -244,7 +244,7 @@ const Product: React.FC = () => {
 						<IonCol size="6">
 							<IonButton
 								className="product-add-to-cart"
-								color="yellow"
+								color="orange"
 								expand="block">
 								Add to Cart
 							</IonButton>
@@ -446,6 +446,48 @@ const Product: React.FC = () => {
 								expand="full">
 								Reviews
 							</IonButton>
+						</IonCol>
+					</IonRow>
+				</IonGrid>
+				<IonGrid>
+					<IonRow>
+						<IonCol size="12">
+							<IonText className="product-review ion-no-padding">
+								<p className="product-review-title">Customer Uploads</p>
+							</IonText>
+						</IonCol>
+						<IonCol size="4">
+							<IonImg
+								className="grid-image-gallery"
+								src="assets/products/productgriditem0.jpg"
+							/>
+						</IonCol>
+						<IonCol size="4">
+							<IonImg
+								className="grid-image-gallery"
+								src="assets/products/productgriditem1.jpg"
+							/>
+						</IonCol>
+						<IonCol className="grid-image-gallery" size="4">
+							<IonImg src="assets/products/productgriditem2.jpg" />
+						</IonCol>
+						<IonCol className="grid-image-gallery" size="4">
+							<IonImg src="assets/products/productgriditem3.jpg" />
+						</IonCol>
+						<IonCol className="grid-image-gallery" size="4">
+							<IonImg src="assets/products/productgriditem4.jpg" />
+						</IonCol>
+						<IonCol className="grid-image-gallery" size="4">
+							<IonImg src="assets/products/productgriditem5.jpg" />
+						</IonCol>
+						<IonCol className="grid-image-gallery" size="4">
+							<IonImg src="assets/products/productgriditem6.jpg" />
+						</IonCol>
+						<IonCol className="grid-image-gallery" size="4">
+							<IonImg src="assets/products/productgriditem7.jpg" />
+						</IonCol>
+						<IonCol className="grid-image-gallery" size="4">
+							<IonImg src="assets/products/productgriditem8.jpg" />
 						</IonCol>
 					</IonRow>
 				</IonGrid>

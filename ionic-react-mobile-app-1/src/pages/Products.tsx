@@ -9,6 +9,7 @@ import {
 	IonIcon,
 	IonImg,
 	IonRow,
+	IonSearchbar,
 	IonText,
 	IonToolbar,
 } from '@ionic/react';
@@ -29,7 +30,7 @@ const Products: React.FC = () => {
 		<React.Fragment>
 			<Head2 />
 			<IonContent>
-				{/* <IonSearchbar className="productssearch" color="light" /> */}
+				<IonSearchbar className="productssearch" color="light" />
 				<IonGrid>
 					<IonRow>
 						<IonCol size="6">
